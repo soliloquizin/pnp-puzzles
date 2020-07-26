@@ -1,45 +1,24 @@
 <script lang="ts">
-	let hasFirstTarget: Boolean = false;
-	let click1: HTMLElement = null;
-	let click2: HTMLElement = null;
-	let id1: number = null;
 
 	function handleClick(e: MouseEvent) {
-		if (hasFirstTarget) {
-			const el = e.target as HTMLElement;
-			const elId = parseInt(el.id.split('-')[1]);
-			if (
-				(elId + 1 === id1) ||
-				(elId - 1 === id1) ||
-				(elId - 5 === id1) ||
-				(elId + 5 === id1)
-			) {
-				// valid switch
-				click2 = el;
-				switchTiles();
-			} else {
-				// invalid switch-attempt
-				resetClicks();
-			}
-		} else {
-			click1 = e.target as HTMLElement;
-			id1 = parseInt(click1.id.split('-')[1]);
-			hasFirstTarget = true;
+		const empty: HTMLElement = document.querySelector('.tile-empty');
+		const emptyId: number = parseInt(empty.id.split('-')[1]);
+		const el = e.target as HTMLElement;
+		const elId: number = parseInt(el.id.split('-')[1]);
+
+		if (
+			elId + 1 === emptyId ||
+			elId - 1 === emptyId ||
+			elId + 5 === emptyId ||
+			elId - 5 === emptyId
+		) {
+			const elClass: string = Array.from(el.classList)
+																	 .find(cl => cl.startsWith('tile-'));
+			empty.classList.toggle('tile-empty');
+			empty.classList.toggle(elClass);
+			el.classList.toggle(elClass);
+			el.classList.toggle('tile-empty');
 		}
-	}
-	function switchTiles() {
-		const class1 = Array.from(click1.classList).find(cl => cl.startsWith('tile-'));
-		const class2 = Array.from(click2.classList).find(cl => cl.startsWith('tile-'));
-		click1.classList.toggle(class1);
-		click1.classList.toggle(class2);
-		click2.classList.toggle(class2);
-		click2.classList.toggle(class1);
-		resetClicks();
-	}
-	function resetClicks() {
-		hasFirstTarget = false;
-		click1 = null;
-		click2 = null;
 	}
 </script>
 
