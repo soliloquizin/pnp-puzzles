@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	function handleClick(e: MouseEvent) {
 		const empty: HTMLElement = document.querySelector('.tile-empty');
 		const emptyId: number = parseInt(empty.id.split('-')[1]);
@@ -19,6 +18,67 @@
 			el.classList.toggle(elClass);
 			el.classList.toggle('tile-empty');
 		}
+		calcEnergy();
+	}
+
+	function calcEnergy() {
+		// remove all "energized" classes
+		for (const tile of document.querySelectorAll('div.tile').entries()) {
+			tile[1].classList.remove('energized');
+		}
+
+		// starting from 1st tile, follow route
+		const first = document.querySelector('#tile-1') as HTMLElement;
+		first.classList.add('energized');
+		calcNextEnergizedTile(first);
+
+		// check if end is energized
+		/* @todo */
+	}
+
+	function calcNextEnergizedTile(tile: HTMLElement) {
+		const tileClass: string = Array.from(tile.classList)
+																	 .find(cl => cl.startsWith('tile-'));
+		const tileId: number = parseInt(tile.id.split('-')[1]);
+		let nextTile: HTMLElement = null
+		switch (tileClass) {
+			case 'tile-up': {
+				// if tile is in top row, end chain
+				if (tileId > 5) {
+					// get tile above
+					nextTile = document.querySelector('#tile-' + (tileId - 5)) as HTMLElement;
+				}
+				break;
+			}
+			case 'tile-right': {
+				// if tile is on the right end of the grid, end chain
+				if (tileId % 5 !== 0) {
+					// get tile to the right
+					nextTile = document.querySelector('#tile-' + (tileId + 1)) as HTMLElement;
+				}
+				break;
+			}
+			case 'tile-down': {
+				// if tile is in the bottom row, end chain
+				if (tileId < 21) {
+					// get tile below
+					nextTile = document.querySelector('#tile-' + (tileId + 5)) as HTMLElement;
+				}
+				break;
+			}
+			case 'tile-left': {
+				// if tile is on the left end of the grid, end chain
+				if (tileId % 5 !== 1) {
+					// get tile to the left
+					nextTile = document.querySelector('#tile-' + (tileId - 1)) as HTMLElement;
+				}
+				break;
+			}
+		}
+		if (nextTile != null && !nextTile.classList.contains('energized')) {
+			nextTile.classList.add('energized');
+			calcNextEnergizedTile(nextTile);
+		}
 	}
 </script>
 
@@ -27,16 +87,16 @@
 		<div id="tile-start" class="energized"></div>
 		<div id="grid">
 			<div class="row">
-				<div class="tile tile-right" id="tile-1" on:click={handleClick}></div>
-				<div class="tile tile-down" id="tile-2" on:click={handleClick}></div>
-				<div class="tile tile-up" id="tile-3" on:click={handleClick}></div>
+				<div class="tile tile-right energized" id="tile-1" on:click={handleClick}></div>
+				<div class="tile tile-down energized" id="tile-2" on:click={handleClick}></div>
+				<div class="tile tile-up energized" id="tile-3" on:click={handleClick}></div>
 				<div class="tile tile-left" id="tile-4" on:click={handleClick}></div>
 				<div class="tile tile-up" id="tile-5" on:click={handleClick}></div>
 			</div>
 			<div class="row">
 				<div class="tile tile-empty" id="tile-6" on:click={handleClick}></div>
-				<div class="tile tile-right" id="tile-7" on:click={handleClick}></div>
-				<div class="tile tile-up" id="tile-8" on:click={handleClick}></div>
+				<div class="tile tile-right energized" id="tile-7" on:click={handleClick}></div>
+				<div class="tile tile-up energized" id="tile-8" on:click={handleClick}></div>
 				<div class="tile tile-down" id="tile-9" on:click={handleClick}></div>
 				<div class="tile tile-left" id="tile-10" on:click={handleClick}></div>
 			</div>
@@ -67,6 +127,7 @@
 </main>
 
 <style>
+	/* @todo get rid of global-styles */
 	main {
 		min-width: 830px;
 	}
@@ -96,7 +157,7 @@
 	.tile-left {
 		background: url('/assets/tile-left.png');
 	}
-	.tile-left.energized {
+	:global(.tile-left.energized) {
 		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-left.png');
 	}
 	.tile-right {
@@ -131,7 +192,7 @@
 		bottom: 20px;
 		right: 10px;
 	}
-	#tile-start.energized, #tile-end.energized {
+	#tile-start.energized, :global(#tile-end.energized) {
 		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-end.png');
 	}
 </style>
