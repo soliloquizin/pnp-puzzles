@@ -151,6 +151,7 @@ import Celebration from "../Celebration.svelte";
 <style>
 	/* @todo get rid of global-styles */
 	section {
+		margin-top: 50px;
 		min-width: 830px;
 	}
 	#grid-wrapper {
