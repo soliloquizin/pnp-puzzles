@@ -14,6 +14,8 @@
 <style>
   header {
     min-width: 500px;
+    max-width: 1000px;
+    position: relative;
   }
   h1 {
     text-align: center;

@@ -1,6 +1,9 @@
 <script lang="ts">
 import { onMount } from "svelte";
 import PuzzleHeader from "../puzzleHeader.svelte";
+import Celebration from "../Celebration.svelte";
+
+	let isSolved: Boolean = false;
 
 	function handleClick(e: MouseEvent) {
 		const empty: HTMLElement = document.querySelector('.tile-empty');
@@ -39,9 +42,11 @@ import PuzzleHeader from "../puzzleHeader.svelte";
 		const last = document.getElementById('tile-25');
     const end = document.getElementById('tile-end');
     if (last.classList.contains('tile-right') && last.classList.contains('energized')) {
-      end.classList.add('energized');
+			end.classList.add('energized');
+			isSolved = true;
     } else {
-      end.classList.remove('energized');
+			end.classList.remove('energized');
+			isSolved = false;
     }
 	}
 
@@ -138,6 +143,9 @@ import PuzzleHeader from "../puzzleHeader.svelte";
 		</div>
 		<div id="tile-end"></div>
 	</div>
+	{#if isSolved === true}
+		<Celebration />
+	{/if}
 </section>
 
 <style>
