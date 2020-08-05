@@ -2,13 +2,20 @@
   import { link } from "svelte-spa-router";
 
   export let puzzleName = "";
+  export let puzzleHelp = "";
 </script>
 
 <header>
   <h1>{puzzleName}</h1>
   <nav>
-    <a href="/" use:link>zum Menü</a>
+    <a href="/" use:link>back to menu</a>
   </nav>
+  {#if puzzleHelp.length > 0}
+  <div>
+    <span>💡</span>
+    <p>{puzzleHelp}</p>
+  </div>
+  {/if}
 </header>
 <hr>
 
@@ -29,5 +36,19 @@
     position: absolute;
     top: 13px;
     left: 25px
+  }
+  div {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+  }
+  span {
+    margin-right: 20px;
+    font-size: 1.5em;
+  }
+  p {
+    font-style: italic;
+    margin: 0;
   }
 </style>

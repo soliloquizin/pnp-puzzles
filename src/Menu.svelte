@@ -8,7 +8,13 @@
     Feel free to use them in yours as well <span>😉</span>.
   </p>
   <p>
-    If you find any bugs <span>🐞</span>, you can report them
+    You have an awesome idea for a puzzle I should add? Open an issue on
+    <a href="https://github.com/corneliapelech/pnp-puzzles/issues" target="_blank">github</a>
+    and add the "new" label or reach out to me on <a href="https://twitter.com/soliloquizin" target="_blank">twitter</a>
+    or via <a href="mailto:&#115;&#111;&#108;&#105;&#108;&#111;&#113;&#117;&#105;&#122;&#105;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;?subject=puzzle idea">email</a>.
+  </p>
+  <p>
+    If you find any bugs <span>🐞</span>, please report them
     <a href="https://github.com/corneliapelech/pnp-puzzles/issues" target="_blank">here</a>.
   </p>
 </div>

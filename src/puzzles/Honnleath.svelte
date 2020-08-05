@@ -2,6 +2,11 @@
 import { onMount } from "svelte";
 import PuzzleHeader from "../puzzleHeader.svelte";
 import Celebration from "../Celebration.svelte";
+	const help = `
+		Click on a tile next to the empty field in the grid to move it to the empty space.
+		The energy has to flow from the upper left to the bottom right.
+		It can only flow to the next tile in the direction of the tiny "arrow" on the tiles.
+	`;
 
 	let isSolved: Boolean = false;
 
@@ -100,7 +105,7 @@ import Celebration from "../Celebration.svelte";
 	});
 </script>
 
-<PuzzleHeader puzzleName={"Honnleath"} />
+<PuzzleHeader puzzleName={"Honnleath"} puzzleHelp={help} />
 <section>
 	<div id="grid-wrapper">
 		<div id="tile-start" class="energized"></div>
