@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
   import { link } from "svelte-spa-router";
+
+  export type contributor = {
+    name: string;
+    link: string;
+  }
 
   export let puzzleName = "";
   export let puzzleHelp = "";
+  export let contributor: contributor = null;
 </script>
 
 <header>
@@ -15,6 +21,9 @@
     <span>💡</span>
     <p>{puzzleHelp}</p>
   </div>
+  {/if}
+  {#if contributor != null}
+    <p id="contributor">made by <a href="{contributor.link}" target="_blank">{contributor.name}</a></p>
   {/if}
 </header>
 <hr>
@@ -50,5 +59,9 @@
   p {
     font-style: italic;
     margin: 0;
+  }
+  #contributor {
+    font-size: 0.9em;
+    text-align: right;
   }
 </style>
