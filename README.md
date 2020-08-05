@@ -17,7 +17,7 @@ If you have a great idea for a puzzle, but do not feel comfortable coding it, pl
 
 ### get your name on it
 
-![example of a contributor mention on a puzzle](https://raw.githubusercontent.com/corneliapelech/puzzles/master/assets/readme-contributor-mention-example.jpg)
+![example of a contributor mention on a puzzle](https://raw.githubusercontent.com/corneliapelech/pnp-puzzles/master/public/assets/readme-contributor-mention-example.JPG)
 
 In your puzzle-component import the contributor-type
 
