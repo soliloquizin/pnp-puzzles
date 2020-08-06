@@ -1,14 +1,10 @@
 <script lang="ts">
   import { link } from "svelte-spa-router";
-
-  export type contributor = {
-    name: string;
-    link: string;
-  }
+  import type { Contributor } from "./types";
 
   export let puzzleName = "";
   export let puzzleHelp = "";
-  export let contributor: contributor = null;
+  export let contributor: Contributor = null;
 </script>
 
 <header>
