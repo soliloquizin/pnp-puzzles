@@ -1,4 +1,4 @@
-///<reference path="./global.d.ts">
+///<reference path="./types/global.d.ts">
 import App from './App.svelte';
 
 const app = new App({
