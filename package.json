@@ -4,10 +4,13 @@
   "homepage": "https://corneliapelech.github.io/pnp-puzzles/",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "start-dev": "rollup -c -w",
     "start": "sirv public -s",
     "validate": "svelte-check",
-    "deploy": "npx gh-pages -d public/"
+    "deploy": "npm run prep-deploy && npx gh-pages -d public/",
+    "prep-deploy": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./prep-deploy.ps1",
+    "prep-dev": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./prep-dev.ps1",
+    "dev": "npm run prep-dev && npm run start-dev"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^12.0.0",
