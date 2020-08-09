@@ -20,6 +20,7 @@
 </div>
 <nav>
   <a href="/honnleath" use:link>Honnleath</a>
+  <a href="/anagram" use:link>Anagram</a>
 </nav>
 
 <style>
@@ -44,6 +45,7 @@
     display: block;
     padding: 10px;
     background-color: lightcyan;
+    margin: 5px 0;
   }
   nav a:hover {
     background-color: lightblue;

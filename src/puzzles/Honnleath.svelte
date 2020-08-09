@@ -1,7 +1,8 @@
 <script lang="ts">
-import { onMount } from "svelte";
-import PuzzleHeader from "../puzzleHeader.svelte";
-import Celebration from "../Celebration.svelte";
+	import { onMount } from "svelte";
+	import PuzzleHeader from "../puzzleHeader.svelte";
+	import Celebration from "../Celebration.svelte";
+
 	const help = `
 		Click on a tile next to the empty field in the grid to move it to the empty space.
 		The energy has to flow from the upper left to the bottom right.
