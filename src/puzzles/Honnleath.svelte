@@ -1,7 +1,8 @@
 <script lang="ts">
-import { onMount } from "svelte";
-import PuzzleHeader from "../puzzleHeader.svelte";
-import Celebration from "../Celebration.svelte";
+	import { onMount } from "svelte";
+	import PuzzleHeader from "../puzzleHeader.svelte";
+	import Celebration from "../Celebration.svelte";
+
 	const help = `
 		Click on a tile next to the empty field in the grid to move it to the empty space.
 		The energy has to flow from the upper left to the bottom right.
@@ -183,33 +184,33 @@ import Celebration from "../Celebration.svelte";
 		opacity: 0;
 	}
 	.tile-left {
-		background: url('/assets/tile-left.png');
+		background: url('/assets/honnleath/tile-left.png');
 	}
 	:global(.tile-left.energized) {
-		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-left.png');
+		background: url('/assets/honnleath/energy.png') no-repeat center, url('/assets/honnleath/tile-left.png');
 	}
 	.tile-right {
-		background: url('/assets/tile-right.png');
+		background: url('/assets/honnleath/tile-right.png');
 	}
 	:global(.tile-right.energized) {
-		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-right.png');
+		background: url('/assets/honnleath/energy.png') no-repeat center, url('/assets/honnleath/tile-right.png');
 	}
 	.tile-up {
-		background: url('/assets/tile-up.png');
+		background: url('/assets/honnleath/tile-up.png');
 	}
 	:global(.tile-up.energized) {
-		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-up.png');
+		background: url('/assets/honnleath/energy.png') no-repeat center, url('/assets/honnleath/tile-up.png');
 	}
 	.tile-down {
-		background: url('/assets/tile-down.png');
+		background: url('/assets/honnleath/tile-down.png');
 	}
 	:global(.tile-down.energized) {
-		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-down.png');
+		background: url('/assets/honnleath/energy.png') no-repeat center, url('/assets/honnleath/tile-down.png');
 	}
 	#tile-start, #tile-end {
 		height: 100px;
 		width: 100px;
-		background: url('/assets/tile-end.png');
+		background: url('/assets/honnleath/tile-end.png');
 		position: absolute;
 	}
 	#tile-start {
@@ -221,6 +222,6 @@ import Celebration from "../Celebration.svelte";
 		right: 10px;
 	}
 	#tile-start.energized, :global(#tile-end.energized) {
-		background: url('/assets/energy.png') no-repeat center, url('/assets/tile-end.png');
+		background: url('/assets/honnleath/energy.png') no-repeat center, url('/assets/honnleath/tile-end.png');
 	}
 </style>
