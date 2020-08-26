@@ -1,7 +1,7 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
-  "homepage": "https://corneliapelech.github.io/pnp-puzzles/",
+  "homepage": "https://soliloquizin.github.io/pnp-puzzles/",
   "scripts": {
     "build": "rollup -c",
     "start-dev": "rollup -c -w",
