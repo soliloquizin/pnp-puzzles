@@ -79,6 +79,7 @@
   function handleBackClick() {
     anagram = null;
     guess = [];
+    isSolved = false;
   }
 </script>
 
