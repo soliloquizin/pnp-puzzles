@@ -1,6 +1,6 @@
 # PnP Puzzles
 
-[Puzzles in action](https://corneliapelech.github.io/pnp-puzzles/)  
+[Puzzles in action](https://soliloquizin.github.io/pnp-puzzles/)  
 I hope you & your group have as much fun with it as we do!
 
 ## Idea
@@ -17,7 +17,7 @@ If you have a great idea for a puzzle, but do not feel comfortable coding it, pl
 
 ### get your name on it
 
-![example of a contributor mention on a puzzle](https://raw.githubusercontent.com/corneliapelech/pnp-puzzles/master/public/assets/readme-contributor-mention-example.JPG)
+![example of a contributor mention on a puzzle](https://raw.githubusercontent.com/soliloquizin/pnp-puzzles/master/public/assets/readme-contributor-mention-example.JPG)
 
 In your puzzle-component import the contributor-type
 
@@ -30,7 +30,7 @@ import type { contributor } from "../puzzleHeader.svelte";
 ```ts
 const contributor: contributor = {
   name: "soliloquizin",
-  link: "https://github.com/corneliapelech"
+  link: "https://github.com/soliloquizin"
 };
 ```
 
