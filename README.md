@@ -1,6 +1,6 @@
 # PnP Puzzles
 
-[Puzzles in action](https://soliloquizin.github.io/pnp-puzzles/)  
+[Puzzles in action](https://soliloquizin.github.io/pnp-puzzles/)
 I hope you & your group have as much fun with it as we do!
 
 ## Idea
@@ -11,11 +11,12 @@ So, this is my puzzle-platform I am currently and will be using. If you or your 
 
 ## Contribution
 
-Feel free to add your own or requested puzzles (see "new" issue-cards) - just open a PR.  
-If you have a great idea for a puzzle, but do not feel comfortable coding it, please create an issue and label it "new".  
-**Please make sure you're allowed to use the art you use in your puzzle-submissions!**
+Feel free to add your own or requested puzzles (see "new" issue-cards) - just open a PR.
+If you have a great idea for a puzzle, but do not feel comfortable coding it, please create an issue and label it "new".
 
-### get your name on it
+**💡 Please make sure you're allowed to use the art you use in your puzzle-submissions!**
+
+### Get your name on it
 
 ![example of a contributor mention on a puzzle](https://raw.githubusercontent.com/soliloquizin/pnp-puzzles/master/public/assets/readme-contributor-mention-example.JPG)
 
@@ -50,9 +51,11 @@ To start the app for development run:
 npm run dev
 ```
 
+💡 Please don't forget to add information about your added puzzles in the GmCheatSheet.svelte!
+
 ## Building and running in production mode
 
-To create an optimised version of the app:
+To create an optimized version of the app:
 
 ```bash
 npm run build

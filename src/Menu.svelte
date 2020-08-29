@@ -7,6 +7,7 @@
   <p>Just some puzzles I developed to use in my pen & paper campaigns <span>🐉</span>.
     Feel free to use them in yours as well <span>😉</span>.
   </p>
+  <p>Your a <strong>Gamemaster</strong>? <a href="/gm" use:link>Here</a> you can find solutions, difficulty rating and suggestions for each of the puzzles.</p>
   <p>
     You have an awesome idea <span>💡</span> for a puzzle I should add? Open an issue on
     <a href="https://github.com/soliloquizin/pnp-puzzles/issues" target="_blank">github</a>
