@@ -118,6 +118,19 @@
         </blockquote>
       </div>
     </li>
+    <li>
+      <div on:click={() => toggleInfo("word-discs")} class="puzzle">
+        <h2>Word Discs</h2>
+        <div id="word-discs" class="info" style="display: none;">
+          <h3>Difficulty</h3>
+          <p>Pretty hard, but highly depends on clues provided.</p>
+          <h3>Solution</h3>
+          <p>JUSTICE</p>
+          <h3>Set it up</h3>
+          <p>Use it as a locking mechanism; I designed it to lock magic-suppressing handcuffs to a mage. 😈</p>
+        </div>
+      </div>
+    </li>
   </ul>
 </section>
 

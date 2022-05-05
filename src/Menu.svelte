@@ -23,6 +23,7 @@
   <a href="/honnleath" use:link>Honnleath</a>
   <a href="/anagram" use:link>Anagram</a>
   <a href="/valves" use:link>Valves</a>
+  <a href="/word-discs" use:link>Word Discs</a>
 </nav>
 
 <style>
